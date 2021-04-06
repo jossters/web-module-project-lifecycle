@@ -1,11 +1,13 @@
 import React from 'react';
+import User from './User';
 
 class GithubCard extends React.Component {
-  
+
+
   render(){
     return (
     <div className="GithubCard">
-     <p>Hello</p>
+     <User data={this.props.data}/>
     </div>
   );
 } 

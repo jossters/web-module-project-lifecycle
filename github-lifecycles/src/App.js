@@ -1,12 +1,13 @@
 import axios from 'axios';
 import React from 'react';
 import './App.css';
+import GithubCard from './components/GithubCard';
 
 class App extends React.Component {
   state = {
     github: [],
   }
-  componentDidMount() {
+  componentDidMount(){
     axios.get('https://api.github.com/users/jossters')
     .then(res=>{
      
@@ -18,10 +19,13 @@ class App extends React.Component {
       console.log(err);
     })
   }
+  
+
+  
   render(){
     return (
     <div className="App">
-     <p>Hello</p>
+      <GithubCard data={this.state.github}/>
     </div>
   );
 } 
